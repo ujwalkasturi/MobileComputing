@@ -1,0 +1,1 @@
+app.py - runs a server and has the local path set where categories is stored
