@@ -69,6 +69,7 @@ public class UploadImageActivity extends AppCompatActivity implements AdapterVie
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 OkHttpClient client = new OkHttpClient();
                 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
                 String filename = "image_"+timeStamp+".jpg";
@@ -85,8 +86,11 @@ public class UploadImageActivity extends AppCompatActivity implements AdapterVie
                 try {
                     response = call.execute();
                     System.out.println("from server - "+response.body().string());
+
+
                 } catch (IOException e) {
                     e.printStackTrace();
+
                 }
 
                 //System.out.println(response.code());
